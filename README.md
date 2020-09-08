@@ -1,6 +1,6 @@
 # Karcha
 
-An App to manage all your transactions.
+An App which keep track of all the transactions you have made. Easy & Simple to use.
 
 ## Screenshot
 
