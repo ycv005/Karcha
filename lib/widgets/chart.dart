@@ -34,12 +34,15 @@ class Chart extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: weekTransactionDetail.map((transx) {
-          return ChartBar(
-              transx['day'],
-              transx['amount'],
-              weekTotalSum == 0.0
-                  ? 0.0
-                  : (((transx['amount'] as double) / weekTotalSum)));
+          return Flexible(
+            fit: FlexFit.tight,
+            child: ChartBar(
+                transx['day'],
+                transx['amount'],
+                weekTotalSum == 0.0
+                    ? 0.0
+                    : (((transx['amount'] as double) / weekTotalSum))),
+          );
         }).toList(),
       ),
     );
